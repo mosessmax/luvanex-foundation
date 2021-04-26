@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/lib.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <header id="experienceHeader">
+        <div class="overlay"></div>
+        <nav>
+            <img src="/images/logo.png" class="brand" alt="">
+            <div class="nav-ul">
+                <ul class="flex-row">
+                    <li><a href="/" class="nav-link active">Home</a></li>
+                    <li class="about"> <a href="#" class="nav-link">About Us</a>
+                        <ul class="dropdown">
+                            <li><a href="/our-firm">About</a></li>
+                            <li><a href="/our-experience">Our Experience</a></li>
+                            </ul>
+                    </li>
+        
+                    <li class="real-estate real"><a href="#" class="nav-link">Our Programs</a>
+                        <ul class="dropdown">
+                            <li><a href="/prayer-clinic">Prayer Clinic</a></li>
+                            <li><a href="/enterpreneurs-for-christ">Enterpreneurs for Christ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Media </a></li>
+                    <li><a href="/contact-us" class="nav-link">Contact Us</a></li>
+                </ul>
+            </div>
+        
+        </nav>
+
+        <div class="overlay-img">
+            <div class="d-flex flex-column align-items-center justify-content-center mx-auto">
+                <h1 class="text-40 text-center white-text mt-50" style="position:relative;">Our Experience</h1>
+            </div>
+        </div>
+    </header>
+    <main id="experience-main" class="mb-100 ">
+
+
+        <div class="mt-100 mb-100">
+
+            <div class="flex-row align-items-center justify-content-center">
+
+                <p class="text-dark mx-auto-lib text-center mt-20 text-20 px-20">As a team, we have years of experience operating medium & long term businesses between Africa and the US. Our experience is rooted in financial asset management and consulting, having worked with banks and private investors for over 10
+                    years.
+                </p>
+            </div>
+        </div>
+        <div class="mt-100">
+            <div class="experience-img1  flex-row flex-end">
+                <img src="/images/investing.jpg" class="investing" alt="" srcset="">
+
+                <div class="content one px-20 bg-black white-text pt-20 pb-100 w-25">
+                    <h1 class="text-35 px-20 mb-10">Investing</h1>
+                    <div class="content-body">
+                        <p class="text-19 px-20">
+                            Our approach to investing stems from our history and experience as owners and managers of various types of financial & physical assets. We have invested both our own capital and that of investors to develop and grow wealth, thereby ensuring our interests
+                            are aligned with investors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="mt-100">
+            <div class="experience-img2  flex-row flex-start">
+                <img src="" alt="" class="middleChild d-none">
+                <div class="content px-20 bg-black white-text pt-20 pb-100 w-25">
+                    <h1 class="text-35 px-20 pt-50 mb-10">Acquisitions</h1>
+                    <div class="content-body">
+                        <p class="text-19 px-20">
+                            We seek to utilize our analytical and operational expertise to acquire undermanaged well-located assets across target markets in the US. By doing this we can enhance cash flows, increase the value of our underlying assets and produce solid long-term returns
+                            for our investors.
+                        </p>
+                    </div>
+                </div>
+                <img src="/images/acquisitions.jpg" class="acquisitions" alt="" srcset="">
+            </div>
+        </div>
+
+        <div class="mt-100">
+            <div class="experience-img3 flex-row flex-start">
+                <img src="" alt="" class="lastChild d-none">
+                <div class="content px-20 bg-black white-text pt-20 pb-100 w-25">
+                    <h1 class="text-35 px-20 pt-50 mb-10">Asset Management</h1>
+                    <div class="content-body">
+                        <p class="text-19 px-20">
+                            Our team has held various management roles in different businesses, and this experience is brought to our post-acquisition decisions. We review market cycles and risk spectrums in order to make informed decisions regarding properties we acquire. We look
+                            to either improve them before selling the assets and returning capital to our limited partners, or focus on building positive cash-flows and steady income-generating assets.
+                        </p>
+                    </div>
+                </div>
+                <img src="/images/management.jpg" class="management" alt="" srcset="">
+            </div>
+        </div>
+    </main>
+
+    <%- include("../template/footer")%>
+
+        <script>
+            function tag(tag) {
+                return document.querySelector(tag)
+            }
+
+            if (window.innerWidth < 769) {
+                const middleChild = tag(".experience-img2 .acquisitions");
+                const lastChild = tag(".experience-img3 .management");
+                // tag(".experience-img3").firstElement = lastChild;
+
+                // tag(".experience-img2").lastElementChild = 
+                tag(".lastChild").src = lastChild.src;
+                tag(".lastChild").classList.replace("d-none", "d-block");
+                lastChild.classList.add("d-none")
+                tag(".experience-img3 .content").classList.remove("px-20")
+                tag(".middleChild").src = middleChild.src;
+                tag(".middleChild").classList.replace("d-none", "d-block");
+                middleChild.classList.add("d-none")
+
+                tag(".experience-img2").classList.replace("flex-row", "flex-column");
+
+                tag(".experience-img2").classList.remove("flex-end");
+                tag(".experience-img2 .content").classList.replace("w-25", "w-100");
+
+                tag(".experience-img1").classList.replace("flex-row", "flex-column");
+                console.log(tag(".experience-img3"))
+            }
+        </script>
+</body>
+
+</html>

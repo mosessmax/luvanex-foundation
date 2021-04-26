@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterpreneurs For Christ</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/lib.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <header id="firmHeader">
+        <div class="overlay"></div>
+        <nav>
+            <img src="/images/logo.png" class="brand" alt="">
+            <div class="nav-ul">
+                <ul class="flex-row">
+                    <li><a href="/" class="nav-link active">Home</a></li>
+                    <li class="about"> <a href="#" class="nav-link">About Us</a>
+                        <ul class="dropdown">
+                            <li><a href="/our-firm">About</a></li>
+                            <li><a href="/our-experience">Our Experience</a></li>
+                            </ul>
+                    </li>
+        
+                    <li class="real-estate real"><a href="#" class="nav-link">Our Programs</a>
+                        <ul class="dropdown">
+                            <li><a href="/prayer-clinic">Prayer Clinic</a></li>
+                            <li><a href="/enterpreneurs-for-christ">Enterpreneurs for Christ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Media </a></li>
+                    <li><a href="/contact-us" class="nav-link">Contact Us</a></li>
+                </ul>
+            </div>
+        
+        </nav>
+
+        <div class="overlay-img">
+            <div class="d-flex flex-column align-items-center justify-content-center mx-auto">
+                <h1 class="text-40 text-center white-text mt-100" style="position:relative;">Enterpreneurs for Christ</h1>
+            </div>
+        </div>
+    </header>
+    <main id="firm-main">
+
+
+        <div class="mt-100 mb-100">
+            <h1 class="text-center text-40 mb-20">Luvanex</h1>
+            <div class="line mx-auto-lib mb-20">
+                <!-- <hr> -->
+            </div>
+            <div class="flex-row align-items-center justify-content-center">
+
+                <p class="text-dark mx-auto-lib text-center w-50 mt-100 text-20">Luvanex is a privately held real estate investment and asset management company headquartered in Charlotte, North Carolina. It started with a unique vision of investing on behalf of individuals, families and institutions of African descent.
+                    Presently we are focused on diversifying the funds into high-quality housing assets.</p>
+            </div>
+        </div>
+    </main>
+
+    <%- include("../template/footer")%>
+
+        <script>
+            function tag(tag) {
+                return document.querySelector(tag)
+            }
+
+            // tag(".active").classList.remove("active");
+        </script>
+</body>
+
+</html>

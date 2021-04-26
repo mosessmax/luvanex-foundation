@@ -1,0 +1,449 @@
+:root {
+    --padding-x: 40px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#indexHeader {
+    background: url("../images/friends.jpg") center no-repeat;
+    background-size: cover;
+    height: 580px;
+    width: 100%;
+}
+
+#firmHeader {
+    background: url("../images/our-firm.jpg") center no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+#experienceHeader {
+    background: url("../images/experience.jpg") center no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+}
+
+nav {
+    position: relative;
+    z-index: 10;
+    padding: 15px var(--padding-x);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.brand {
+    /* position: relative; */
+    z-index: 10;
+    width: 75px;
+    height: 75px;
+}
+
+.dropdown {
+    display: none;
+    background: black;
+    border-top: 2px solid yellow;
+    position: absolute;
+    /* bottom: -55px; */
+    width: 270px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+}
+
+.nav-ul {
+    margin-top: 25px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    color: white;
+    font-size: 16px;
+    margin-left: 28px;
+    font-weight: 100 !important;
+}
+
+.active {
+    padding-bottom: 2px;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#firmHeader .overlay {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(3, 3, 3, .5);
+}
+
+#experienceHeader .overlay {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(3, 3, 3, .3);
+}
+
+#indexHeader .overlay {
+    height: 580px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(3, 3, 3, .5);
+}
+
+#indexHeader .overlay-img {
+    display: flex;
+    justify-content: center;
+    height: 580px;
+    /* align-items: center !important; */
+    z-index: 5;
+    position: relative;
+}
+
+
+/* #experience-main {} */
+
+#experience-main .experience-img1 {
+    /* position: relative; */
+    /* border: 1px solid red; */
+    padding-right: 45px;
+}
+
+#experience-main .experience-img1 img {
+    width: 70%;
+    height: 550px;
+    /* position: absolute; */
+    /* position: relative; */
+    /* right: 10px; */
+    /* left: 0px; */
+}
+
+.experience-img1 .content {
+    position: absolute;
+    width: 500px;
+    left: 5%;
+    margin-top: +3%;
+    /* bottom: -45%; */
+}
+
+#experience-main .experience-img2 img {
+    /* position: absolute; */
+    width: 1000px;
+    /* width: 70%; */
+    right: 55%;
+    height: 550px;
+    /* bottom: -45%; */
+}
+
+.experience-img2 .content {
+    /* position: absolute;*/
+    width: 400px;
+    /* right: 55%; */
+    /* bottom: -45%; */
+}
+
+.experience-img3 {
+    position: relative !important;
+}
+
+#experience-main .experience-img3 img {
+    height: 500px;
+    /* width: 500px; */
+    width: 70%;
+    padding-left: 40px;
+    /* right: 55%; */
+    /* bottom: -45%; */
+}
+
+.experience-img3 .content {
+    position: absolute;
+    width: 600px;
+    z-index: 2;
+    right: 3%;
+    margin-top: +5%;
+    /* bottom: -45%; */
+}
+
+header .overlay-img img {
+    /* top: 0;
+    margin: 0 auto; */
+    /* width: ; */
+}
+
+main {
+    margin-bottom: 0;
+    overflow-x: hidden;
+}
+
+footer {
+    margin-top: 0 !important;
+}
+
+main .card {
+    /* width: 500px; */
+    width: 41.9%;
+    height: 436px;
+    padding: 40px 30px 0 30px;
+    background: #fff;
+    border: 2px solid black;
+    color: black;
+}
+
+
+/* .card .card-title {} */
+
+.line {
+    width: 30%;
+    height: 5px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 40px;
+}
+
+main .first {
+    background: url("../images/friends.jpg") center no-repeat;
+    background-size: repeat;
+}
+
+.first,
+.second,
+.third,
+.fourth {
+    height: 480px;
+    width: 100%;
+    padding: 0 var(--padding-x);
+    overflow-x: hidden;
+}
+
+main .second {
+    background: url("../images/girls.jpg") left  no-repeat;
+    overflow-x: hidden;
+    background-size: contain; 
+}
+
+.second,
+.fourth {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.card {
+    margin-right: 80px;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+main .third {
+    background: url("../images/fountain.jpg") center;
+    background-size: cover !important;
+}
+
+main .fourth {
+    background: url("../images/children.jpg") left no-repeat;
+    background-size: contain;
+}
+
+@media screen and (min-width:1001px) {
+    header ul li:hover .dropdown {
+        display: block !important;
+        /* position: relative; */
+    }
+    .brand {
+        width: 200px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .dropdown {
+        display: none !important;
+    }
+    .nav-ul {
+        /* padding: 10px 20px; */
+        margin: 0;
+        background: #fff;
+        display: none;
+    }
+    .wrapper {
+        width: 100%;
+        background: white;
+        position: fixed !important;
+        /* width: 100vw !important; */
+        z-index: 5;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .real-child,
+    .about-child,
+    .invest-child {
+        /* position: fixed !important;
+        background-color: white;
+        z-index: 8;
+        top: 0; */
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .real-child,
+    .about-child,
+    .invest-child {
+        transform: translateX(100%);
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 100%;
+        position: absolute;
+        transition: transform .5s;
+    }
+    /* .back{} */
+    .show-about-child {
+        transform: translateX(0%);
+    }
+    .wrapper ul {
+        margin-top: 30px;
+        /* display: none; */
+        flex-direction: column;
+        color: black !important;
+        transform: translateX(0vw);
+        transition: transform .5s;
+    }
+    .hide-wrapper {
+        transform: translateX(-100vw) !important;
+    }
+    .wrapper ul li a,
+    .about-child a,
+    .real-child a,
+    .invest-child a {
+        text-decoration: none;
+        color: #000 !important;
+        font-size: 20px;
+    }
+    .about-child li,
+    .real-child li,
+    .invest-child li {
+        margin-bottom: 5px;
+    }
+    .wrapper ul li {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .brand {
+        width: 65px;
+        height: 65px;
+    }
+    .logoimg {
+        width: 250px
+    }
+    #experience-main {
+        padding: 0 10px !important;
+        text-align: center;
+    }
+    .experience-img1 {
+        padding-right: 0px !important;
+    }
+    .experience-img1 img {
+        width: 100% !important;
+        height: 300px !important;
+    }
+    .experience-img1 .content {
+        position: static !important;
+        left: 0 !important;
+        margin: 0 !important;
+        padding: 30px 0 !important;
+        width: 100% !important;
+    }
+    .experience-img2 img {
+        right: 0 !important;
+        width: 100% !important;
+        height: 300px !important;
+    }
+    .experience-img2 .content {
+        position: static !important;
+        z-index: 3;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        padding-top: 0px !important;
+        padding-bottom: 20px !important;
+    }
+    .experience-img3 {
+        display: block !important;
+        padding: 0 0px !important;
+        margin-right: 0 !important
+    }
+    .experience-img3 .management {
+        /* order: 2 !important; */
+    }
+    .experience-img3 .content {
+        position: static !important;
+        margin-top: 0 !important;
+        width: 95% !important;
+        margin-top: 10px;
+        margin-right: 0 !important;
+        right: 0 !important;
+        margin-left: 0 !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .experience-img3 .content p {
+        font-size: 18px !important;
+        padding: 0 !important;
+    }
+    .lastChild {
+        margin-right: 0 !important;
+        padding: 0 0 !important;
+        width: 100% !important;
+        height: 300px !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #firm-main .w-50 {
+        width: 90% !important;
+    }
+    .brand {
+        width: 65px;
+        height: 65px;
+    }
+    .logoimg {
+        width: 200px
+    }
+    .overlay-img p {
+        padding: 0 10px;
+        text-align: center;
+    }
+    nav {
+        padding: 10px 20px;
+    }
+}
+
+.new-home {
+    width: 100%;
+    padding: 3% 12%;
+    background-image: url(../images/acquisitions.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+
